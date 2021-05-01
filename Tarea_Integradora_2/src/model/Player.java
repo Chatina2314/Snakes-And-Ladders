@@ -6,6 +6,8 @@ public class Player {
 	private String symbol = "";
 	private int moves = 0;
 	private int rollDice = 0;
+	//Relations
+	private Player next;
 	//Methods
 	public Player(String pName, int pScore, String pSymbol, int pMoves, int pRollDice) {
 		name = pName;
@@ -43,5 +45,11 @@ public class Player {
 	}
 	public void setRollDice(int rollDice) {
 		this.rollDice = rollDice;
+	}
+	public Player getNext() {
+		return next;
+	}
+	public void setNext(Player next) {
+		this.next = next;
 	}
 }

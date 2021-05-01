@@ -1,10 +1,13 @@
- package model;
+package model;
 public class Board {
 	//Attributes
 	private int n = 0;
 	private int m = 0;
 	private int s = 0;
 	private int e = 0;
+	private long p;
+	//Relations
+	private Player first;
 	//Methods
 	Board(int pN, int pM, int pS, int pE){
 		n = pN;
@@ -35,5 +38,28 @@ public class Board {
 	}
 	public void setE(int e) {
 		this.e = e;
+	}
+	public long getP() {
+		return p;
+	}
+	public void setP(long p) {
+		this.p = p;
+	}
+	public void addPlayer(String name, int score, String symbol, int moves, int rollDice) {
+		Player add = new Player(name, score, symbol, moves, rollDice);
+		if(first==null) {
+			first = add;
+		}
+		else {
+			Player last = first;
+			
+			while(last.getNext()!=null) {
+				last = last.getNext();
+			}
+			last.setNext(add);
+		}
+	}
+	public void createBoard(){
+		
 	}
 }
