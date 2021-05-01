@@ -5,7 +5,7 @@ public class Board {
 	private int m = 0;
 	private int s = 0;
 	private int e = 0;
-	private long p;
+	private int p = 0;
 	//Relations
 	private Player first;
 	//Methods
@@ -39,10 +39,10 @@ public class Board {
 	public void setE(int e) {
 		this.e = e;
 	}
-	public long getP() {
+	public int getP() {
 		return p;
 	}
-	public void setP(long p) {
+	public void setP(int p) {
 		this.p = p;
 	}
 	public void addPlayer(String name, int score, String symbol, int moves, int rollDice) {

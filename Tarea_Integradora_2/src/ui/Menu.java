@@ -6,7 +6,7 @@ public class Menu {
 	private Menu mainMenu;
 	public static Scanner lector;
 	//Relations
-		private Board[][] board;
+		private Board board;
 		//Methods
 		Menu(){
 			lector = new Scanner(System.in);
